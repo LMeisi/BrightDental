@@ -1,6 +1,11 @@
 //////////////// jQuery
 
 $(function () {
+  // Automate carousel sliding
+  // $(".carousel").carousel({
+  //   interval: 2000,
+  // });
+
   // Set form variable
   let form = $("#form");
   // Call below function upon Website loading
