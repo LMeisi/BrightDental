@@ -11,6 +11,28 @@
       content="Bright Dental is one of the most visited dental clinics in the Southern California area. Bright Dental is known for the clinic's professionalism and the range of services offered, and is consistently ranked as one of the best dental clinics in the nation."
     />
 
+    <!-- jQuery -->
+    <script
+      src="https://code.jquery.com/jquery-1.12.4.min.js"
+      integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- bootstrap link for js -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Default bootstrap link for CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+
     <!-- icon in title - 64 by 64 -->
     <link rel="icon" href="img/logo/logo-pic-64by64.jpg" />
 
@@ -37,24 +59,29 @@
       rel="stylesheet"
     />
 
-    <!-- Default bootstrap link for CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
-      crossorigin="anonymous"
-    />
-
     <!-- Bootstrap icons -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
     />
 
+    <!-- ion icons -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+
     <!-- Custom CSS stylesheet -->
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="general.css" />
     <link rel="stylesheet" href="queries.css" />
+
+    <!-- javascript file -->
+    <script src="script.js"></script>
 
     <title>Bright Dental</title>
   </head>
@@ -92,24 +119,34 @@
           class="collapse navbar-collapse justify-content-end align-items-center"
           id="main-nav"
         >
-          <ul class="navbar-nav text-nowrap align-items-lg-center">
+          <ul class="navbar-nav text-nowrap align-items-center">
             <li class="nav-item ms-2">
-              <a class="nav-link fw-bold" href="#">Home</a>
+              <a class="nav-link fw-bold text-blue-primary" href="#">Home</a>
             </li>
             <li class="nav-item ms-2">
-              <a class="nav-link fw-bold" href="#about">About Us</a>
+              <a class="nav-link fw-bold text-blue-primary" href="#about"
+                >About Us</a
+              >
             </li>
             <li class="nav-item ms-2">
-              <a class="nav-link fw-bold" href="#services">Services</a>
+              <a class="nav-link fw-bold text-blue-primary" href="#services"
+                >Services</a
+              >
             </li>
             <li class="nav-item ms-2">
-              <a class="nav-link fw-bold" href="#dentists">Dentists</a>
+              <a class="nav-link fw-bold text-blue-primary" href="#dentists"
+                >Dentists</a
+              >
             </li>
             <li class="nav-item ms-2">
-              <a class="nav-link fw-bold" href="#facilities">Facilities</a>
+              <a class="nav-link fw-bold text-blue-primary" href="#facilities"
+                >Facilities</a
+              >
             </li>
             <li class="nav-item ms-2">
-              <a class="nav-link fw-bold" href="#contact">Contact</a>
+              <a class="nav-link fw-bold text-blue-primary" href="#contact"
+                >Contact</a
+              >
             </li>
             <!-- Note there's no 'nav-link' for last anchor -->
             <li class="nav-item ms-0 ms-lg-3">
@@ -121,7 +158,7 @@
             <li class="nav-item ms-2 d-none d-lg-inline">
               <!-- facebook -->
               <a
-                class="nav-link text-decoration-none"
+                class="nav-link nav-link-icon text-decoration-none"
                 href="http://www.facebook.com"
               >
                 <ion-icon
@@ -133,7 +170,7 @@
             <!-- linkedin -->
             <li class="nav-item d-none d-lg-inline">
               <a
-                class="nav-link text-decoration-none"
+                class="nav-link nav-link-icon text-decoration-none"
                 href="http://www.linkedin.com"
               >
                 <ion-icon
@@ -317,11 +354,13 @@
             <!-- Director name and image - Flexbox -->
             <div class="lead-dentist-container d-flex align-items-center">
               <!-- img -->
-              <img
-                class="lead-dentist-img"
-                src="img/dentist-headshot-2-revised-sqshed.jpg"
-                alt="Customer photo"
-              />
+              <div class="lead-dentist-img-container">
+                <img
+                  class="lead-dentist-img"
+                  src="img/dentist-headshot-2-revised-sqshed.jpg"
+                  alt="Customer photo"
+                />
+              </div>
               <!-- Name and title -->
               <div class="lead-dentist-info ms-2">
                 <div class="lead-dentist-name fs-5 fw-bold text-blue-primary">
@@ -336,7 +375,7 @@
           <!-- img col, only display when sm screen and up -->
           <div class="col-lg-5 mt-3 py-3 text-center d-none d-lg-block">
             <img
-              class="img-fluid shadow"
+              class="about-img img-fluid shadow rounded"
               src="img/connor-wilkins-u68jZr7ky0I-unsplash-sqshed.jpg"
               alt="about us image"
             />
@@ -346,7 +385,7 @@
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="bg-dark-tone py-2">
+    <section id="services" class="bg-dark-tone py-2 fadein">
       <div class="container-lg px-4 my-5">
         <!-- section title -->
         <div class="text-center">
@@ -475,7 +514,7 @@
     </section>
 
     <!-- Dentists Section -->
-    <section id="dentists" class="py-2">
+    <section id="dentists" class="py-2 fadein">
       <div class="container-lg px-4 my-5">
         <!-- section title -->
         <div class="text-center">
@@ -502,8 +541,8 @@
                 <!-- Dentist Img -->
                 <div class="text-center dentist-card">
                   <img
-                    class="img-fluid shadow"
-                    src="img/pexels-gabriel-marqui-15559915-portrait-sqshed.jpg"
+                    class="img-fluid shadow rounded"
+                    src="img/Doc img 2 revised.jpg"
                     alt="Dentist"
                   />
                 </div>
@@ -519,7 +558,7 @@
               <div class="d-flex pt-1 align-items-top justify-content-center">
                 <!-- facebook -->
                 <a
-                  class="nav-link text-decoration-none"
+                  class="nav-link nav-link-icon text-decoration-none"
                   href="http://www.facebook.com"
                 >
                   <ion-icon
@@ -530,7 +569,7 @@
 
                 <!-- linkedin -->
                 <a
-                  class="nav-link text-decoration-none"
+                  class="nav-link nav-link-icon text-decoration-none"
                   href="http://www.linkedin.com"
                 >
                   <ion-icon
@@ -541,7 +580,7 @@
 
                 <!-- twitter -->
                 <a
-                  class="nav-link text-decoration-none"
+                  class="nav-link nav-link-icon text-decoration-none"
                   href="http://twitter.com"
                 >
                   <ion-icon
@@ -562,8 +601,8 @@
                 <!-- Dentist Img -->
                 <div class="text-center dentist-card">
                   <img
-                    class="img-fluid shadow"
-                    src="img/pexels-gabriel-marqui-15559914-v3-sqshed.jpg"
+                    class="img-fluid shadow rounded"
+                    src="img/doc img.jpg"
                     alt="Dentist"
                   />
                 </div>
@@ -579,7 +618,7 @@
               <div class="d-flex pt-1 align-items-top justify-content-center">
                 <!-- facebook -->
                 <a
-                  class="nav-link text-decoration-none"
+                  class="nav-link nav-link-icon text-decoration-none"
                   href="http://www.facebook.com"
                 >
                   <ion-icon
@@ -590,7 +629,7 @@
 
                 <!-- linkedin -->
                 <a
-                  class="nav-link text-decoration-none"
+                  class="nav-link nav-link-icon text-decoration-none"
                   href="http://www.linkedin.com"
                 >
                   <ion-icon
@@ -601,7 +640,7 @@
 
                 <!-- twitter -->
                 <a
-                  class="nav-link text-decoration-none"
+                  class="nav-link nav-link-icon text-decoration-none"
                   href="http://twitter.com"
                 >
                   <ion-icon
@@ -622,7 +661,7 @@
                 <!-- Dentist Img -->
                 <div class="text-center dentist-card">
                   <img
-                    class="img-fluid shadow"
+                    class="img-fluid shadow rounded"
                     src="img/pexels-antoni-shkraba-6749773-sqshed.jpg"
                     alt="Dentist"
                   />
@@ -637,7 +676,7 @@
               <div class="d-flex pt-1 align-items-top justify-content-center">
                 <!-- facebook -->
                 <a
-                  class="nav-link text-decoration-none"
+                  class="nav-link nav-link-icon text-decoration-none"
                   href="http://www.facebook.com"
                 >
                   <ion-icon
@@ -648,7 +687,7 @@
 
                 <!-- linkedin -->
                 <a
-                  class="nav-link text-decoration-none"
+                  class="nav-link nav-link-icon text-decoration-none"
                   href="http://www.linkedin.com"
                 >
                   <ion-icon
@@ -664,7 +703,7 @@
     </section>
 
     <!-- Facilities Section (tabs) -->
-    <section id="facilities" class="py-2 mt-4">
+    <section id="facilities" class="py-2 mt-4 fadein">
       <div class="container-lg px-4 my-5">
         <!-- section title -->
         <div class="text-center">
@@ -702,7 +741,7 @@
               >
                 <!-- nav btn -->
                 <button
-                  class="nav-link active"
+                  class="nav-link nav-link-pill active"
                   id="nav-treatment-tab"
                   data-bs-toggle="pill"
                   data-bs-target="#nav-treatment"
@@ -716,7 +755,7 @@
 
                 <!-- nav btn -->
                 <button
-                  class="nav-link"
+                  class="nav-link nav-link-pill"
                   id="nav-profile-tab"
                   data-bs-toggle="pill"
                   data-bs-target="#nav-xray"
@@ -730,7 +769,7 @@
 
                 <!-- nav btn -->
                 <button
-                  class="nav-link"
+                  class="nav-link nav-link-pill"
                   id="nav-contact-tab"
                   data-bs-toggle="pill"
                   data-bs-target="#nav-laser"
@@ -898,7 +937,7 @@
     </section>
 
     <!-- FAQs Section -->
-    <section id="faqs" class="py-2 mb-5">
+    <section id="faqs" class="py-2 mb-5 fadein">
       <div class="container-lg px-4 my-5">
         <!-- section title -->
         <div class="text-center">
@@ -921,7 +960,7 @@
             <div class="mb-4 px-2">
               <div class="pe-0 pe-lg-5">
                 <img
-                  class="img-fluid rounded shadow"
+                  class="faq-img img-fluid rounded shadow"
                   src="img/pexels-daniel-frank-287227-v2-sqshed.jpg"
                   alt="faq image"
                 />
@@ -1165,7 +1204,7 @@
     <!-- CTA Section -->
     <section
       id="cta"
-      class="my-4 cta-container bg-less-darker-green text-lighter-blue"
+      class="my-4 cta-container bg-less-darker-green text-lighter-blue fadein"
     >
       <div class="container-lg px-4">
         <div class="row pt-5 pb-5 align-items-top justify-content-center gx-5">
@@ -1180,10 +1219,10 @@
                 </h1>
               </div>
             </h1>
-            <form class="mt-3 pt-2">
+            <form id="form" class="mt-3 pt-2" novalidate autocomplete="off">
               <!-- Name: Use input-group for input -->
               <label for="name" class="form-label">Name:</label>
-              <div class="input-group mb-4 pe-0 pe-lg-4">
+              <div class="input-group pe-0 pe-lg-4">
                 <span class="input-group-text">
                   <i class="bi bi-person-fill"></i>
                 </span>
@@ -1206,11 +1245,14 @@
                   </span>
                 </span>
               </div>
+              <!-- Error message -->
+              <p id="name-feedback"></p>
 
               <!-- Email -->
-              <label for="email" class="form-label">Email address:</label>
+              <label for="email" class="form-label mt-3">Email address:</label>
+
               <!-- Use input-group (to include icons in the input fields) -->
-              <div class="mb-4 input-group pe-0 pe-lg-4">
+              <div class="mb-1 input-group pe-0 pe-lg-4">
                 <span class="input-group-text">
                   <i class="bi bi-envelope-fill"></i>
                 </span>
@@ -1233,35 +1275,54 @@
                   </span>
                 </span>
               </div>
+              <!-- Error message -->
+              <p id="email-feedback"></p>
 
-              <!-- Description -->
-              <label for="query" class="form-label">How can we help: </label>
+              <!-- Message Description -->
+              <label for="message" class="form-label mt-3"
+                >How can we help:
+              </label>
+
               <!-- input -->
-              <div class="mb-4 input-group pe-0 pe-lg-4">
+              <div class="mb-1 input-group pe-0 pe-lg-4">
                 <textarea
-                  id="query"
+                  id="message"
                   class="form-control"
                   style="height: 140px"
                   placeholder="A brief description of your needs"
                 ></textarea>
               </div>
+              <!-- Error message -->
+              <p id="message-feedback"></p>
 
               <!-- button container -->
-              <div class="text-center">
-                <!-- modal button -->
-                <button
+              <div class="text-center pt-3">
+                <!-- submit button -->
+                <!-- <button
                   type="submit"
+                  id="submit-button"
                   class="btn btn-white-gray mt-4 mb-4 px-3 py-2 fw-bold shadow"
                   data-bs-toggle="modal"
                   data-bs-target="#request-modal"
                 >
                   Book Appointment
-                </button>
+                </button> -->
+                <input
+                  type="submit"
+                  id="submit-button"
+                  class="btn btn-white-gray mt-4 mb-4 px-3 py-2 fw-bold shadow"
+                  value="Book Appointment"
+                />
               </div>
             </form>
             <p class="text-center mt-2">
               Or call
-              <b>800-633-7788</b> to book appointment over the phone.
+              <a
+                href="tel:800-633-7788"
+                class="contact-link-text-cta text-light fw-bold text-decoration-none"
+                >800-633-7788</a
+              >
+              to book appointment over the phone.
             </p>
           </div>
 
@@ -1278,7 +1339,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="mt-5 pb-2">
+    <section id="contact" class="mt-5 pb-2 fadein">
       <div class="container-lg px-4 py-5">
         <!-- section title -->
         <div class="text-center">
@@ -1322,7 +1383,11 @@
               </div>
               <!-- contact phone -->
               <div class="col-8">
-                <p>800-633-7788</p>
+                <a
+                  href="tel:800-633-7788"
+                  class="contact-link-text text-decoration-none"
+                  >800-633-7788</a
+                >
               </div>
             </div>
 
@@ -1334,7 +1399,11 @@
               </div>
               <!-- contact mail -->
               <div class="col-8">
-                <p>contact@brightdentaloffice.com</p>
+                <a
+                  href="mailto:contact@brightdentaloffice.com"
+                  class="contact-link-text text-decoration-none"
+                  >contact@brightdentaloffice.com</a
+                >
               </div>
             </div>
 
@@ -1408,15 +1477,20 @@
             <div class="pt-4">
               <p class="small text-blue-primary text-center text-md-start">
                 Providing trusted dental service for clients in need <br />for
-                over 20 years <br /><br />Call 800-633-7788 to book an
-                appointment
+                over 20 years <br /><br />Call
+                <a
+                  href="tel:800-633-7788"
+                  class="contact-link-text-footer text-decoration-none"
+                  >800-633-7788</a
+                >
+                to book an appointment
               </p>
               <div
                 class="d-flex py-3 py-md-2 justify-content-center justify-content-md-start"
               >
                 <!-- facebook -->
                 <a
-                  class="nav-link text-decoration-none"
+                  class="nav-link nav-link-icon text-decoration-none"
                   href="http://www.facebook.com"
                 >
                   <ion-icon
@@ -1427,7 +1501,7 @@
 
                 <!-- linkedin -->
                 <a
-                  class="nav-link text-decoration-none"
+                  class="nav-link nav-link-icon text-decoration-none"
                   href="http://www.linkedin.com"
                 >
                   <ion-icon
@@ -1470,35 +1544,35 @@
                   <li class="pb-2">
                     <a
                       href="#about"
-                      class="text-decoration-none text-blue-primary"
+                      class="footer-link text-decoration-none text-blue-primary"
                       >About Us</a
                     >
                   </li>
                   <li class="pb-2">
                     <a
                       href="#services"
-                      class="text-decoration-none text-blue-primary"
+                      class="footer-link text-decoration-none text-blue-primary"
                       >Services</a
                     >
                   </li>
                   <li class="pb-2">
                     <a
                       href="#dentists"
-                      class="text-decoration-none text-blue-primary"
+                      class="footer-link text-decoration-none text-blue-primary"
                       >Dentists</a
                     >
                   </li>
                   <li class="pb-2">
                     <a
                       href="#facilities"
-                      class="text-decoration-none text-blue-primary"
+                      class="footer-link text-decoration-none text-blue-primary"
                       >Facilities</a
                     >
                   </li>
                   <li class="pb-2">
                     <a
                       href="#contact"
-                      class="text-decoration-none text-blue-primary"
+                      class="footer-link text-decoration-none text-blue-primary"
                       >Contact</a
                     >
                   </li>
@@ -1522,21 +1596,21 @@
                   <li class="pb-2">
                     <a
                       href="#services"
-                      class="text-decoration-none text-blue-primary"
+                      class="footer-link text-decoration-none text-blue-primary"
                       >Preventive Treatments</a
                     >
                   </li>
                   <li class="pb-2">
                     <a
                       href="#services"
-                      class="text-decoration-none text-blue-primary"
+                      class="footer-link text-decoration-none text-blue-primary"
                       >Restorative Treatments</a
                     >
                   </li>
                   <li class="pb-2">
                     <a
                       href="#services"
-                      class="text-decoration-none text-blue-primary"
+                      class="footer-link text-decoration-none text-blue-primary"
                       >Cosmetic Procedures</a
                     >
                   </li>
@@ -1548,8 +1622,7 @@
         <!-- footer copyright link -->
         <div class="border-top border-secondary text-center text-md-start">
           <p class="pt-2 small text-blue-primary">
-            Copyright &copy; 2023 by Bright Dental Corporation. All rights
-            reserved.
+            Copyright &copy; 2023 by Bright Dental LLC. All rights reserved.
           </p>
         </div>
       </div>
@@ -1569,7 +1642,9 @@
           <!-- modal-header (including close button) -->
           <div class="modal-header">
             <!-- modal title id to match with 'aria-baelledby' in 'modal' class -->
-            <h5 class="modal-title" id="modal-title">Appointment Booked!</h5>
+            <h5 class="modal-title" id="modal-title">
+              Thank you for booking with us!
+            </h5>
             <!-- Close modal button -->
             <button
               type="button"
@@ -1581,15 +1656,22 @@
           <!-- modal-body -->
           <div class="modal-body">
             <p class="py-3">
-              Thank you for your booking. Our staff will review your information
-              and reach out to you as quickly as we can.<br /><br />At the mean
-              time, if you have a dental emergency, please call us at
-              <span class="fw-bold text-blue-primary">800-633-7788</span>.
+              Our staff will review your information and reach out to you for an
+              appointment time.<br /><br />At the mean time, if you have a
+              dental emergency, please call us at
+              <span class="fw-bold text-blue-primary"
+                ><a
+                  href="tel:800-633-7788"
+                  class="contact-link-text-footer text-decoration-none"
+                  >800-633-7788</a
+                ></span
+              >.
             </p>
           </div>
           <!-- modal-footer -->
           <div class="modal-footer justify-content-center">
             <button
+              id="modal-footer-button"
               class="btn btn-blue-secondary"
               data-bs-dismiss="modal"
               aria-label="Close"
@@ -1601,13 +1683,6 @@
       </div>
     </div>
 
-    <!-- bootstrap link for js -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-      crossorigin="anonymous"
-    ></script>
-
     <!-- Tooltip javascript -->
     <script>
       // Select all (custom) tt class elements
@@ -1616,44 +1691,6 @@
       tooltips.forEach((t) => {
         new bootstrap.Tooltip(t);
       });
-    </script>
-
-    <!-- ion icons -->
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-    ></script>
-
-    <!-- For Safari Flexbox gap -->
-    <script>
-      ///////////////////////////////////////////////////////////
-      // Fixing flexbox gap property missing in some Safari versions
-
-      /* Since some Safari browsers don't support gap property for flexbox, we have to manually add the gap properties to the flexboxes in CSS */
-      /* Below code when executed, will add the 'no-flexbox-gap' class to body, thus triggering the 'no-flexbox-gap' class related formats to apply (all flex gap related) */
-
-      function checkFlexGap() {
-        var flex = document.createElement("div");
-        flex.style.display = "flex";
-        flex.style.flexDirection = "column";
-        flex.style.rowGap = "1px";
-
-        flex.appendChild(document.createElement("div"));
-        flex.appendChild(document.createElement("div"));
-
-        document.body.appendChild(flex);
-        var isSupported = flex.scrollHeight === 1;
-        flex.parentNode.removeChild(flex);
-        console.log(isSupported);
-
-        // If browser doesn't support, add below class to body
-        if (!isSupported) document.body.classList.add("no-flexbox-gap");
-      }
-      checkFlexGap();
     </script>
   </body>
 </html>

@@ -271,6 +271,7 @@ Medium: 11px
 .btn-blue-secondary:active {
   background-color: #104671;
   color: #e8f1f8;
+  border-color: #e8f1f8;
 }
 
 /* //////////// Previous //////////////// */
@@ -290,7 +291,7 @@ Medium: 11px
 .btn-white-gray:active {
   /* background-color: #001415; */
   background-color: #104671;
-  /* border-color: #e8f1f8; */
+  border-color: #e8f1f8;
   color: #e8f1f8;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.156);
 }
